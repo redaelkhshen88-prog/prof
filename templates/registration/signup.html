@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block content %}
+<form method="post" class="card auth"><h2>أنشئ حساب طالب</h2>{% csrf_token %}{{ form.as_p }}
+<button class="btn" style="width:100%">إنشاء الحساب</button>
+<p class="sub">لديك حساب؟ <a href="{% url 'login' %}">سجّل الدخول</a></p></form>
+{% endblock %}

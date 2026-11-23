@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block content %}
+<h2 style="padding-top:30px">{{ course.level }} · {{ course.title }}</h2><p class="sub">{{ course.description }}</p>
+{% for l in course.lessons.all %}<div class="ls"><div style="flex:1"><b>{{ l.title }}</b><br><small class="sub">الأسبوع {{ l.week }} · {{ l.minutes }} دقيقة</small></div>
+{% if l.is_free_preview or access %}<a class="btn" href="{% url 'lesson' l.pk %}">▶ شغّل</a>{% else %}<a class="btn gh" href="{% url 'plans' %}">🔒 للمشتركين</a>{% endif %}</div>{% endfor %}
+{% endblock %}

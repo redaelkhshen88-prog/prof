@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block content %}
+<form method="post" class="card auth"><h2>أهلاً بعودتك</h2>{% csrf_token %}{{ form.as_p }}
+<button class="btn" style="width:100%">تسجيل الدخول</button>
+<p class="sub"><a href="{% url 'password_reset' %}">نسيت كلمة المرور؟</a> · <a href="{% url 'signup' %}">أنشئ حسابًا</a></p></form>
+{% endblock %}
