@@ -1,0 +1,13 @@
+:root{--bg:linear-gradient(160deg,#F4EEFF,#E4EEFF 55%,#FDEAF5);--sf:rgba(255,255,255,.85);--tx:#1D1540;--mu:#6B6490;--pu:#3E2A82;--go:#E3B93C;--ln:#E4DFF5;--c1:#FFE6DF;--c2:#FDE6F5;--c3:#DCEFFF;--c4:#E3E2FF}
+@media(prefers-color-scheme:dark){:root{--bg:linear-gradient(160deg,#16102E,#101A3A);--sf:rgba(38,30,78,.9);--tx:#F0ECFF;--mu:#ADA5D6;--pu:#6C55D6;--ln:#352D6A;--c1:#3D2A3C;--c2:#3C2A4E;--c3:#22345A;--c4:#2D2B64}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg) fixed;color:var(--tx);font:16px/1.7 "Readex Pro",Cairo,sans-serif;min-height:100vh}
+a{color:inherit;text-decoration:none}.wrap{max-width:1040px;margin:auto;padding:0 20px 60px}
+header{background:var(--sf);backdrop-filter:blur(12px);position:sticky;top:0;z-index:5}.bar{max-width:1040px;margin:auto;padding:10px 20px;display:flex;gap:14px;align-items:center}
+.bar nav{margin-inline-start:auto;display:flex;gap:10px;align-items:center}.bar nav form{margin:0}
+.btn{display:inline-block;border:0;cursor:pointer;font:inherit;padding:10px 24px;border-radius:99px;background:var(--pu);color:#fff}.btn.gh{background:none;color:var(--tx);border:1.5px solid var(--ln)}
+.card{background:var(--sf);border-radius:24px;padding:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.hc{background:var(--pu);color:#fff;border-radius:28px;padding:22px}.sub{color:var(--mu)}.prog{height:10px;background:var(--ln);border-radius:9px;overflow:hidden}.prog i{display:block;height:100%;background:var(--pu)}
+.auth{max-width:480px;margin:40px auto}.auth input,.auth select{width:100%;padding:11px 16px;border:1.5px solid var(--ln);border-radius:16px;background:transparent;color:var(--tx);font:inherit}
+.auth p{margin:10px 0}.errorlist{color:#E0455F;list-style:none;padding:0;margin:4px 0;font-size:14px}.msg{background:var(--c1);padding:10px 16px;border-radius:14px;margin:12px 0}
+.ls{display:flex;gap:12px;align-items:center;background:var(--sf);border-radius:20px;padding:12px 16px;margin-bottom:10px}
+.pr{font-size:30px;font-weight:700;color:var(--pu)}:focus-visible{outline:3px solid var(--go);outline-offset:2px}
