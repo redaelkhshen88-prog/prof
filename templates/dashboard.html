@@ -1,5 +1,0 @@
-{% extends "base.html" %}{% block content %}
-<h2 style="padding-top:30px">أهلاً {{ user.first_name }} 👋</h2>
-<div class="hc" style="margin-bottom:24px">{% if sub %}اشتراكك: <b>{{ sub.plan.name }}</b> · ينتهي {{ sub.end|date:"Y/m/d" }}{% else %}ليس لديك اشتراك فعّال. <a class="btn gh" style="color:#fff;border-color:#fff" href="{% url 'plans' %}">اختر خطة</a>{% endif %}</div>
-<h3>كورساتي</h3><div class="grid">{% for c, pct in rows %}<a class="card" href="{% url 'course' c.pk %}"><b>{{ c.level }} · {{ c.title }}</b><div class="prog" style="margin:10px 0"><i style="width:{{ pct }}%"></i></div><small class="sub">{{ pct }}% مكتمل</small></a>{% endfor %}</div>
-{% endblock %}

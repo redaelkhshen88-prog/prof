@@ -1,6 +1,0 @@
-{% extends "base.html" %}{% block content %}
-<section style="padding:60px 0"><h1 style="font-size:44px;line-height:1.3">الفرنسية بتتعلم بالتدريب كل يوم.</h1>
-<p class="sub">دروس قصيرة وتدريبات وتقدمك بيظهر قدامك في كل خطوة.</p>
-<a class="btn" href="{% url 'signup' %}">أنشئ حسابك</a> <a class="btn gh" href="{% url 'login' %}">تسجيل الدخول</a></section>
-<div class="grid">{% for c in courses %}<a class="card" href="{% url 'course' c.pk %}"><b>{{ c.level }}</b><br>{{ c.title }}<br><small class="sub">{{ c.lessons.count }} درسًا</small></a>{% empty %}<p class="sub">أضف الكورسات من لوحة الإدارة.</p>{% endfor %}</div>
-{% endblock %}

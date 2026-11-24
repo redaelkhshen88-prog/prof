@@ -1,9 +1,0 @@
-{% extends "base.html" %}{% block content %}
-<h2 style="padding-top:30px">{{ lesson.title }}</h2>
-<video id="v" controls style="width:100%;border-radius:20px" src="{{ lesson.video_url }}"></video>
-<p><a class="btn gh" href="{% url 'course' lesson.course_id %}">رجوع للكورس</a></p>
-<script>
-const v=document.getElementById('v'),csrf='{{ csrf_token }}';v.currentTime={{ progress.position_seconds }};
-function save(done){fetch("{% url 'progress' lesson.pk %}",{method:'POST',headers:{'X-CSRFToken':csrf,'Content-Type':'application/x-www-form-urlencoded'},body:'position='+Math.floor(v.currentTime)+'&completed='+(done?1:0)})}
-setInterval(()=>{if(!v.paused)save(false)},10000);v.onended=()=>save(true);
-</script>{% endblock %}

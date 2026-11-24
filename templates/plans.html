@@ -1,7 +1,0 @@
-{% extends "base.html" %}{% block content %}
-<h2 style="padding-top:30px">اختر اشتراكك</h2><div class="grid">
-{% for p in plans %}<div class="card"><b>{{ p.name }}</b><div class="pr">{{ p.price_egp|floatformat:0 }} <small class="sub">ج.م / {{ p.months }} شهر</small></div>
-<ul class="sub">{% for f in p.feature_list %}<li>{{ f }}</li>{% endfor %}</ul>
-<form method="post" action="{% url 'checkout' p.pk %}">{% csrf_token %}<button class="btn" {% if not user.is_authenticated %}formaction="{% url 'login' %}" formmethod="get"{% endif %}>اشترك</button></form></div>
-{% empty %}<p class="sub">أضف الباقات من لوحة الإدارة.</p>{% endfor %}</div>
-{% endblock %}
